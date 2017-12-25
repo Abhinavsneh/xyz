@@ -1,0 +1,1 @@
+CorrectAge = if(DimCustomer[BirthDateDDMM] <= DimCustomer[TODAYDDMM], DATEDIFF(DimCustomer[BirthDate],NOW(),YEAR)-1,DATEDIFF(DimCustomer[BirthDate],NOW(),YEAR))
