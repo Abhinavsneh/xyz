@@ -1,0 +1,7 @@
+Number Of Months = 
+CALCULATE(
+CALCULATE(COUNTROWS(VALUES(DueDate[MonthNumberOfYear])),FactInternetSales),
+DATESBETWEEN(DueDate[FullDateAlternateKey],
+	NEXTDAY(SAMEPERIODLASTYEAR(LASTDATE(DueDate[FullDateAlternateKey]))),
+	LASTDATE(DueDate[FullDateAlternateKey])),ALL(FactInternetSales)
+)
